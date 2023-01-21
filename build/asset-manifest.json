@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ADHD-Mind-Works/static/css/main.53641881.css",
+    "main.js": "/ADHD-Mind-Works/static/js/main.e56023b2.js",
+    "static/media/ADHDpic.png": "/ADHD-Mind-Works/static/media/ADHDpic.2af0800edf74e2b7faa2.png",
+    "static/media/crown3.png": "/ADHD-Mind-Works/static/media/crown3.001456261107a5e7b0cc.png",
+    "static/media/wolf.png": "/ADHD-Mind-Works/static/media/wolf.c44d096fc6cf643fd964.png",
+    "static/media/rabbit.png": "/ADHD-Mind-Works/static/media/rabbit.a8151299ad298e294327.png",
+    "index.html": "/ADHD-Mind-Works/index.html",
+    "main.53641881.css.map": "/ADHD-Mind-Works/static/css/main.53641881.css.map",
+    "main.e56023b2.js.map": "/ADHD-Mind-Works/static/js/main.e56023b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53641881.css",
+    "static/js/main.e56023b2.js"
+  ]
+}
