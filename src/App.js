@@ -8,6 +8,7 @@ import rabbit from '../src/rabbit.png';
 import wolf from "../src/wolf.png";
 import adhd from "../src/ADHDpic.png";
 import crown from "../src/crown3.png";
+import adhd2 from "../src/ADHD picture.png"
 import { useCountdown } from './useCountdown';
 import DateTimeDisplay from './DateTimeDisplay';
 
@@ -53,15 +54,15 @@ function App() {
   }
   
   function scrollAbout() {
-    window.scrollTo(0, 850);
+    window.scrollTo(0, 920);
   }
 
   function scrollGame() {
-    window.scrollTo(0, 1800);
+    window.scrollTo(0, 2270);
   }
 
   function scrollContact() {
-    window.scrollTo(0, 2900);
+    window.scrollTo(0, 30000);
   }
   
   useEffect(() => {
@@ -95,7 +96,7 @@ function App() {
             </div>
 
             
-            <div className='flex justify-center items-center my-36'>
+            <div className='flex justify-center items-center mt-36 mb-10'>
             
               <div className='w-1/2 h-auto'>
                 <h1 className='text-5xl text-white font-semibold'>About Us:</h1>
@@ -103,6 +104,16 @@ function App() {
               
               </div>
               <img className='w-1/5 px-10 h-96 rounded-lg' src={adhd}></img>
+            </div>
+
+            <div className='flex justify-center items-center mb-36 mt-10'>
+            
+              <div className='w-1/2 h-auto'>
+                <h1 className='text-5xl text-white font-semibold'>Objectives:</h1>
+              <h2 className='text-3xl text-white'>Our team plans to provide another alternative for parents having children with ADHD. It is known that medication is one of the best methods of help for a student with ADHD. However, medication could be expensive and have many side effects. Therefore, our gamification method is free and effective in improving ADHD students’ attention span and motivation to learn.</h2>
+              
+              </div>
+              <img className='w-1/5 px-10 h-96 rounded-lg' src={adhd2}></img>
             </div>
             
             <div className='flex justify-center items-center mb-40'>
