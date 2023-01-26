@@ -58,7 +58,7 @@ function App() {
   }
 
   function scrollGame() {
-    window.scrollTo(0, 2270);
+    window.scrollTo(0, 2300);
   }
 
   function scrollContact() {
@@ -208,7 +208,7 @@ function App() {
   useEffect(() => {
     if (rabbitHome) {
       setrabbitHomeDisplay (
-        <div className="antialised bg-gradient-to-r from-purple-400 to-blue-500 h-screen">
+        <div className="antialised bg-gradient-to-r from-purple-400 to-blue-500 h-full">
           <div className='flex justify-center items-center gap-8'>
           <button className='bg-fuchsia-600 mt-5 border border-violet-700 rounded-lg shadow-lg text-5xl text-white px-9 py-3 text-center' onClick={clickrabbitGamep3} > Primary 3</button>
           <button className='bg-fuchsia-600 mt-5 border border-violet-700 rounded-lg shadow-lg text-5xl text-white px-9 py-3 text-center' onClick={clickrabbitGame} > Primary 4</button>
@@ -226,7 +226,7 @@ function App() {
           </div>
           </div>
           <div className='flex justify-center items-center'>
-          <button className='border border-black rounded-lg shadow-lg bg-red-700 px-9 py-3 my-9 text-center text-neutral-100 text-5xl' onClick={clickMainPage1} > 🏠 </button>
+          <button className='border border-black rounded-lg shadow-lg bg-red-700 px-9 py-3 mb-32 mt-9 text-center text-neutral-100 text-5xl' onClick={clickMainPage1} > 🏠 </button>
           </div>
           
           
@@ -698,7 +698,7 @@ function RabbitHomePagep6() {
   }
 
 
-  const THREE_DAYS_IN_MS = 1 * 60 * 1000;
+  const THREE_DAYS_IN_MS = 0 * 0 * 1000;
   const NOW_IN_MS = new Date().getTime();
 
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
@@ -747,6 +747,20 @@ const [stagex3Display, setStagex3Display] =useState()
 const [stagex4Display, setStagex4Display] =useState()
 const [stagex5Display, setStagex5Display] =useState()
 
+function restartMind() {
+  setStage1(true);
+  setStage9(false);
+  setScore1(0)
+  setScore2(0)
+  setScore3(0)
+  setScore4(0)
+  setScore5(0)
+  setPlayer1("")
+  setPlayer2("")
+  setPlayer3("")
+  setPlayer4("")
+  setPlayer5("")
+}
 
 function click() {
   setStage1(false);
@@ -761,35 +775,35 @@ function home() {
 useEffect(() => {
   if (stage1) {
     setStage1Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
       <div>
-        <h1 className="antialiased  text-5xl font-semibold text-center pt-5 uppercase">Welcome to the MindMap Challenge!!!</h1>
-        <h1 className='antialiased  text-5xl font-semibold text-center pt-5 uppercase'>Who will be the MindMap Genius 😎</h1>
+        <h1 className="antialiased text-gray-100 text-7xl font-semibold text-center pt-5 uppercase">Welcome to the MindMap Challenge!!!</h1>
+        <h1 className='antialiased text-gray-100 text-7xl font-semibold text-center pt-5 uppercase'>Who will be the MindMap Genius 😎</h1>
         
         <div className='flex gap-10 justify-center items-center mt-10'>
           <div className='m-10'>
-          <h2 className='text-3xl'>Challenger 1:</h2>
+          <h2 className='text-3xl font-medium'>Challenger 1:</h2>
           <input className='mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ' placeholder='Enter Player Name here' onChange={p1}></input>
           </div>
 
           <div className='m-10'>
-          <h2 className='text-3xl'>Challenger 2:</h2>
+          <h2 className='text-3xl font-medium'>Challenger 2:</h2>
           <input className='mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ' placeholder='Enter Player Name here' onChange={p2} ></input>
           </div>
 
           <div className='m-10'>
-          <h2 className='text-3xl'>Challenger 3:</h2>
+          <h2 className='text-3xl font-medium'>Challenger 3:</h2>
           <input className='mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ' placeholder='Enter Player Name here' onChange={p3} ></input>
           </div>
 
           <div className='m-10'>
-          <h2 className='text-3xl'>Challenger 4:</h2>
+          <h2 className='text-3xl font-medium'>Challenger 4:</h2>
           <input className='mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ' placeholder='Enter Player Name here' onChange={p4} ></input>
           </div>
           
           <div className='m-10'>
-          <h2 className='text-3xl'>Challenger 5:</h2>
+          <h2 className='text-3xl font-medium'>Challenger 5:</h2>
           <input className='mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ' placeholder='Enter Player Name here' onChange={p5} ></input>
           </div>
 
@@ -826,7 +840,7 @@ useEffect(() => {
 useEffect(() =>{
   if (stagex1) {
     setStagex1Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
   <div>
   <h1 className='text-3xl font-semibold '>{player1} Enter your hidden secret down below 😉</h1>
@@ -852,7 +866,7 @@ function x1() {
 useEffect(() =>{
   if (stagex2) {
     setStagex2Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
   <div>
   <h1 className='text-3xl font-semibold '>{player2} Enter your hidden secret down below 😉</h1>
@@ -878,7 +892,7 @@ function x2() {
 useEffect(() =>{
   if (stagex3) {
     setStagex3Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
   <div>
   <h1 className='text-3xl font-semibold '>{player3} Enter your hidden secret down below 😉</h1>
@@ -904,7 +918,7 @@ function x3() {
 useEffect(() =>{
   if (stagex4) {
     setStagex4Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
   <div>
   <h1 className='text-3xl font-semibold '>{player4} Enter your hidden secret down below 😉</h1>
@@ -930,7 +944,7 @@ function x4() {
 useEffect(() =>{
   if (stagex5) {
     setStagex5Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
   <div>
   <h1 className='text-3xl font-semibold '>{player5} Enter your hidden secret down below 😉</h1>
@@ -976,19 +990,19 @@ function s5(event) {
 useEffect(() => {
   if (stage2) {
     setStage2Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
       <div className='flex flex-col'>
       <div className=''>
-    <h1 className='text-center text-9xl text-zinc-800 font-semibold'>Countdown Timer</h1>
+    <h1 className='text-center text-9xl text-gray-200 font-semibold'>Countdown Timer</h1>
     <CountdownTimer targetDate={dateTimeAfterThreeDays} />
     </div>
 
     <div>
-      <h1 className='text-center text-5xl text-zinc-800 font-medium'>
+      <h1 className='text-center text-5xl text-gray-200 font-medium'>
         You have 10 minutes
       </h1>
-      <h1 className='uppercase text-center text-5xl text-red-800 font-medium mt-4'>
+      <h1 className='uppercase text-center text-7xl text-gray-200 font-medium mt-4'>
         Begin the MindMap Challenge!!!
       </h1>
     </div>
@@ -1005,12 +1019,12 @@ useEffect(() => {
 useEffect(() => {
   if (stage3) {
     setStage3Display(
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
       <div>
-        <h1 className='text-neutral-900 text-center text-5xl font-medium uppercase '>Put your Pens down</h1>
-        <h1 className='text-neutral-900 text-center text-7xl font-medium uppercase mb-5'>It is Presentation time</h1>
-        <h1 className='text-neutral-900 text-center text-3xl font-normal uppercase'>Once everyone presented their mindmaps click on the red button below</h1>
+        <h1 className='text-gray-200 text-center text-5xl font-medium uppercase '>Put your Pens down</h1>
+        <h1 className='text-gray-200 text-center text-7xl font-medium uppercase mb-5'>It is Presentation time!!!</h1>
+        <h1 className='text-gray-200 text-center text-5xl font-normal uppercase'>Once everyone presented their mindmaps click on the red button below</h1>
         <div className='flex justify-center items-center'>
         <button className='border border-black rounded-lg shadow-lg bg-red-600 px-9 py-3 text-center my-9 text-white w-60 text-medium' onClick={ready}>
             Finish
@@ -1040,7 +1054,7 @@ const ShowCounter = ({ minutes, seconds }) => {
   return (
     <div className="flex flex-row justify-center items-center m-5">
       <a
-        href="https://tapasadhikary.com"
+        
         target="_blank"
         rel="noopener noreferrer"
         className="countdown-link"
@@ -1095,7 +1109,7 @@ function p5(event) {
 useEffect(() => {
   if (stage4) {
     setStage4Display (
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
     <div>
         <h1 className='text-neutral-900 text-center text-3xl font-medium uppercase'>{player1} Please vote for who you think is the mindmap genius</h1>
@@ -1156,7 +1170,7 @@ function stage1p5() {
 useEffect(() => {
   if (stage5) {
     setStage5Display (
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
       <div>
       <h1 className='text-neutral-900 text-center text-3xl font-medium uppercase'>{player2} Please vote for who you think is the mindmap genius</h1>
@@ -1205,7 +1219,7 @@ function stage2p5() {
 useEffect(() => {
   if (stage6) {
     setStage6Display (
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
      <div>
       <h1 className='text-neutral-900 text-center text-3xl font-medium uppercase'>{player3} Please vote for who you think is the mindmap genius</h1>
@@ -1254,7 +1268,7 @@ function stage3p5() {
 useEffect(() => {
   if (stage7) {
     setStage7Display (
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
       <div>
         <h1 className='text-neutral-900 text-center text-3xl font-medium uppercase'>{player4} Please vote for who you think is the mindmap genius</h1>
@@ -1303,7 +1317,7 @@ function stage4p5() {
 useEffect(() => {
   if (stage8) {
     setStage8Display (
-      <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+      <div className=' bg-gradient-to-r from-amber-700 to-pink-600 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
       <div>
         <h1 className='text-neutral-900 text-center text-3xl font-medium uppercase'>{player5} Please vote for who you think is the mindmap genius</h1>
@@ -1355,21 +1369,28 @@ useEffect(() => {
   if (stage9) {
     if (score1>score2 && score1>score3 && score1>score4 && score1>score5) {
       setStage9Display(
-        <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+        <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
         <div>
-          <h1 className='text-7xl font-medium text-neutral-900 text-center'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player1} </span></h1>
+          <h1 className='text-7xl font-medium text-neutral-900 text-center mb-10'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player1} </span></h1>
           <h1 className='text-5xl font-medium text-center text-neutral-900'>You are a MindMap Genius 🎉🎉🎉</h1>
+          <h1 className='text-5xl font-medium text-center text-slate-200'> {player1} score is {score1} </h1>
           <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'>
             {player2}, {player3}, {player4}, {player5}, You have lost to the MindMap Genius
           </h1>
           <div>
-          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player2}</span> : {secret2} </h1>
-          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player3}</span> : {secret3} </h1>
-          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player4}</span> : {secret4} </h1>
-          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player5}</span> : {secret5}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player2}</span> : {secret2} | The score is {score2}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player3}</span> : {secret3} | The score is {score3}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player4}</span> : {secret4} | The score is {score4}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'> <span className='text-5xl text-slate-200'>{player5}</span> : {secret5} | The score is {score5}</h1>
+          <div className='flex justify-center items-center'>
+          <button className='border border-black rounded-lg shadow-lg bg-red-600 px-9 py-3 text-center my-9 text-white w-60 ml-3' onClick={restartMind}>
+            Home
+          </button>
+          </div>
           </div>
         </div>
+        
         </div>
         </div>
       )
@@ -1377,21 +1398,28 @@ useEffect(() => {
 
     if (score2>score1 && score2>score3 && score2>score4 && score2>score5) {
       setStage9Display(
-        <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+        <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
         <div>
-          <h1 className='text-7xl font-medium text-neutral-900'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player2} </span></h1>
+          <h1 className='text-7xl font-medium text-neutral-900 text-center mb-10'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player2} </span></h1>
           <h1 className='text-5xl font-medium text-center text-neutral-900'>You are a MindMap Genius 🎉🎉🎉</h1>
-          <h1>
+          <h1 className='text-5xl font-medium text-center text-slate-200'> {player2} score is {score2} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'>
             {player1}, {player3}, {player4}, {player5}, You have lost to the MindMap Genius
           </h1>
           <div>
-          <h1>{player1} {secret1} </h1>
-          <h1>{player3} {secret3} </h1>
-          <h1>{player4} {secret4} </h1>
-          <h1>{player5} {secret5} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player1}</span> : {secret1} | The score is {score1}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player3}</span> : {secret3} | The score is {score3}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player4}</span> : {secret4} | The score is {score4}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player5}</span> : {secret5} | The score is {score5}</h1>
+          <div className='flex justify-center items-center'>
+          <button className='border border-black rounded-lg shadow-lg bg-red-600 px-9 py-3 text-center my-9 text-white w-60 ml-3' onClick={restartMind}>
+            Home
+          </button>
+          </div>
           </div>
         </div>
+        
         </div>
         </div>
       )
@@ -1399,21 +1427,28 @@ useEffect(() => {
 
     if (score3>score1 && score3>score2 && score3>score4 && score3>score5) {
       setStage9Display(
-        <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+        <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
       <div className='flex w-full h-screen justify-center items-center'>
         <div>
-          <h1 className='text-7xl font-medium text-neutral-900'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player3} </span></h1>
+          <h1 className='text-7xl font-medium text-neutral-900 text-center mb-10'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player3} </span></h1>
           <h1 className='text-5xl font-medium text-center text-neutral-900'>You are a MindMap Genius 🎉🎉🎉</h1>
-          <h1>
+          <h1 className='text-5xl font-medium text-center text-slate-200'> {player3} score is {score3} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'>
             {player1}, {player2}, {player4}, {player5}, You have lost to the MindMap Genius
           </h1>
           <div>
-          <h1>{player1} {secret1} </h1>
-          <h1>{player2} {secret2} </h1>
-          <h1>{player4} {secret4} </h1>
-          <h1>{player5} {secret5} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player1}</span> : {secret1} | The score is {score1}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player2}</span> : {secret2} | The score is {score2}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player4}</span> : {secret4} | The score is {score4}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player5}</span> : {secret5} | The score is {score5}</h1>
+          <div className='flex justify-center items-center'>
+          <button className='border border-black rounded-lg shadow-lg bg-red-600 px-9 py-3 text-center my-9 text-white w-60 ml-3' onClick={restartMind}>
+            Home
+          </button>
+          </div>
           </div>
         </div>
+        
         </div>
         </div>
       )
@@ -1421,21 +1456,28 @@ useEffect(() => {
 
     if (score4>score1 && score4>score3 && score4>score2 && score4>score5) {
       setStage9Display(
-        <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
+        <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
         <div className='flex w-full h-screen justify-center items-center'>
         <div>
-          <h1 className='text-7xl font-medium text-neutral-900'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player4} </span></h1>
+          <h1 className='text-7xl font-medium text-neutral-900 text-center mb-10'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player4} </span></h1>
           <h1 className='text-5xl font-medium text-center text-neutral-900'>You are a MindMap Genius 🎉🎉🎉</h1>
-          <h1>
+          <h1 className='text-5xl font-medium text-center text-slate-200'> {player4} score is {score4} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'>
             {player1}, {player2}, {player3}, {player5}, You have lost to the MindMap Genius
           </h1>
           <div>
-          <h1>{player1} {secret1} </h1>
-          <h1>{player2} {secret2} </h1>
-          <h1>{player3} {secret3} </h1>
-          <h1>{player5} {secret5} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player1}</span> : {secret1} | The score is {score1}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player2}</span> : {secret2} | The score is {score2}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player3}</span> : {secret3} | The score is {score3}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player5}</span> : {secret5} | The score is {score5}</h1>
+          <div className='flex justify-center items-center'>
+          <button className='border border-black rounded-lg shadow-lg bg-red-600 px-9 py-3 text-center my-9 text-white w-60 ml-3' onClick={restartMind}>
+            Home
+          </button>
+          </div>
           </div>
         </div>
+        
         </div>
         </div>
       )
@@ -1443,21 +1485,28 @@ useEffect(() => {
 
     if (score5>score1 && score5>score3 && score5>score2 && score5>score4) {
       setStage9Display(
-        <div className=' bg-gradient-to-r from-amber-600 to-purple-700 h-screen '>
-        <div className='flex w-full h-screen justify-center items-center'>
+        <div className=' bg-gradient-to-r from-amber-700 to-pink-700 h-screen '>
+        <div className='flex w-full h-screen justify-center items-center flex-row'>
         <div>
-          <h1 className='text-7xl font-medium text-neutral-900'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player5} </span></h1>
+          <h1 className='text-7xl font-medium text-neutral-900 text-center mb-10'>Congratulations <span className='text-9xl font-semibold text-slate-200'>{player5} </span></h1>
           <h1 className='text-5xl font-medium text-center text-neutral-900'>You are a MindMap Genius 🎉🎉🎉</h1>
-          <h1>
+          <h1 className='text-5xl font-medium text-center text-slate-200'> {player5} score is {score5} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'>
             {player1}, {player2}, {player3}, {player4}, You have lost to the MindMap Genius
           </h1>
           <div>
-          <h1>{player1} secret is : {secret1} </h1>
-          <h1>{player2} secret is : {secret2} </h1>
-          <h1>{player3} secret is : {secret3} </h1>
-          <h1>{player4} secret is : {secret4} </h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player1}</span> : {secret1} | The score is {score1}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player2}</span> : {secret2} | The score is {score2}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player3}</span> : {secret3} | The score is {score3}</h1>
+          <h1 className='text-3xl font-medium text-center text-neutral-900 mt-10'><span className='text-5xl text-slate-200'>{player4}</span> : {secret4} | The score is {score4}</h1>
+          <div className='flex justify-center items-center'>
+          <button className='border border-black rounded-lg shadow-lg bg-red-600 px-9 py-3 text-center my-9 text-white w-60 ml-3' onClick={restartMind}>
+            Home
+          </button>
+          </div>
           </div>
         </div>
+        
         </div>
         </div>
       )
