@@ -116,7 +116,7 @@ function App() {
               <img className='w-1/5 px-10 h-96 rounded-lg' src={adhd2}></img>
             </div>
             
-            <div className='flex justify-center items-center mb-40'>
+            <div className='flex justify-center items-center mt-10 mb-36'>
               <h1 className='text-5xl text-white font-bold'>"What you stay focused on will grow" -Roy T. Bennett</h1>
             </div>
 
@@ -130,23 +130,23 @@ function App() {
           <div className='flex flex-row gap-20 mx-20 mb-20'>
           <div className=''>
           
-          <button className='border border-black rounded-lg shadow-2xl bg-red-600 px-9 py-3 text-center my-3 text-white w-60 h-64 ml-28 ' onClick={clickrabbitHome}><img src={rabbit}   /></button>
+          <button className='border border-black rounded-lg shadow-2xl bg-red-600 px-9 py-3 text-center my-3 text-white w-44 h-48 ml-28 ' onClick={clickrabbitHome}><img src={rabbit}   /></button>
           <div>
           <div className='bg-slate-700 w-full h-full p-10'>
             
-          <h1 className='text-5xl text-white pb-2'> Game 1: </h1>
-          <h1 className='text-3xl text-white'>🥕Save Sergeant Carrots🐇</h1>
+          <h1 className='text-3xl text-white pb-2'> Game 1: </h1>
+          <h1 className='text-2xl text-white'>🥕Save Sergeant Carrots🐇</h1>
           </div>
           </div>
           </div>
 
           <div className=''>
-          <button className='border border-black rounded-lg shadow-2xl bg-red-600 px-1 py-1 text-center my-3 text-white w-60 h-64 ml-16' onClick={click2}> <img src={crown}    /></button>
+          <button className='border border-black rounded-lg shadow-2xl bg-red-600 px-1 py-1 text-center my-3 text-white w-44 h-48 ml-16' onClick={click2}> <img src={crown}    /></button>
           <div className=''>
           <div className='bg-slate-700 w-full h-full p-10 '>
           
-          <h1 className='text-5xl text-white pb-2'> Game 2:</h1>
-          <h1 className='text-3xl text-white'>👑 MindMap King 👑</h1>
+          <h1 className='text-3xl text-white pb-2'> Game 2:</h1>
+          <h1 className='text-2xl text-white'>👑 MindMap King 👑</h1>
           </div>
           </div>
           </div>
@@ -414,8 +414,8 @@ const optionClicked = (isCorrect) => {
 useEffect(() => {
   if(rabbitGamep3) {
     setrabbitGamep3Display(
-      <div className="antialised bg-gradient-to-r from-purple-400 to-blue-500 h-screen">
-          <div className='flex w-full h-screen justify-center items-center'>
+      <div className="antialised bg-gradient-to-r from-purple-400 to-blue-500 h-full">
+          <div className='flex w-full h-full justify-center items-center'>
               <div className='w-full max-w-3xl'>
               <p className="text-5xl font-bold mt-8 text-center">
                 Save Sergeant Whiskers from the BIG BAD WOLF!
@@ -461,7 +461,7 @@ useEffect(() => {
               
                )}
                <div>
-               <button className='flex justify-center ml-80 border border-black rounded-lg shadow-lg bg-red-700 px-9 py-3 text-center my-9 text-neutral-100 text-3xl' onClick={RabbitHomePagep3}> Home </button>
+               <button className='flex justify-center ml-80 border border-black rounded-lg shadow-lg bg-red-700 px-9 py-3 text-center mt-9 mb-20 text-neutral-100 text-3xl' onClick={RabbitHomePagep3}> Home </button>
                </div>
                
               </div>
