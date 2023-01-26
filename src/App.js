@@ -698,7 +698,7 @@ function RabbitHomePagep6() {
   }
 
 
-  const THREE_DAYS_IN_MS = 0 * 0 * 1000;
+  const THREE_DAYS_IN_MS = 10 * 60 * 1000;
   const NOW_IN_MS = new Date().getTime();
 
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
